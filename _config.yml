@@ -23,7 +23,7 @@ bmobRestApiKey: 6f1419c800083315432f2df7dcb503d4
 
 # 域名配置
 # baseUrl配置,如果网站部署在根目录下的目录中，请设置为 /目录名
-domainUrl: 'https://github.com/luke-king'
+domainUrl: 'https://luke-king.github.io/'
 baseUrl: ''
 
 # 菜单
@@ -51,7 +51,7 @@ customPlugins:
     file: 'plugin-baidu-push.html'
   - use: true
     file: 'plugin-click-effect.html'
-  - use: false
+  - use: true
     file: 'plugin-mathjax.html'
 
 # 这些不要动
