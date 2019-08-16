@@ -1,10 +1,10 @@
 encoding: utf-8
 
 # SEO相关信息
-title: TMaize Blog
-description: TMaize的个人博客
-keywords: TMaize,Blog,Java,Html,JavaScript
-author: TMaize
+title: KKHouse Blog
+description: LK的个人博客
+keywords: KKLIU,Blog,SLAM,deep learning
+author: LK
 footerText: 'Copyright © 2016 皖ICP备16016174号'
 
 # 留言配置, 不需要的话值设置为空，同时删除 # 菜单 配置项中的留言页面
@@ -23,7 +23,7 @@ bmobRestApiKey: 6f1419c800083315432f2df7dcb503d4
 
 # 域名配置
 # baseUrl配置,如果网站部署在根目录下的目录中，请设置为 /目录名
-domainUrl: 'http://blog.tmaize.net'
+domainUrl: 'https://github.com/luke-king'
 baseUrl: ''
 
 # 菜单
@@ -47,7 +47,7 @@ customPlugins:
     file: 'plugin-mta-stats.html'
     sid: 500581966
     cid: 500581972
-  - use: true
+  - use: false
     file: 'plugin-baidu-push.html'
   - use: true
     file: 'plugin-click-effect.html'
