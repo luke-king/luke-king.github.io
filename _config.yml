@@ -18,8 +18,10 @@ footerText: 'Copyright © 2019 LK. All rights reserved'
 # email    String
 # content  String
 # website  String
-bmobApplicationId: 34f0386ac5bd50fd77fe82190af00faf
-bmobRestApiKey: 6f1419c800083315432f2df7dcb503d4
+#bmobApplicationId: 34f0386ac5bd50fd77fe82190af00faf
+bmobApplicationId: ba70c1931e2d351855f5f4baae2f3faf
+#bmobRestApiKey: 6f1419c800083315432f2df7dcb503d4
+bmobRestApiKey: 084748ebed4464c5b46febc1ba0f2101
 
 # 域名配置
 # baseUrl配置,如果网站部署在根目录下的目录中，请设置为 /目录名
