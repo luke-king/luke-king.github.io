@@ -89,21 +89,21 @@ blog.addLoadEvent(function() {
       query.equalTo('content', comment_content)
       query.find({
           success: function (results) {
-              alert("共查询到 " + results.length + " 条记录");
+              //alert("共查询到 " + results.length + " 条记录");
               // 删除查询到的记录
-              for (var i = 0; i < results.length; i++) {
-                  var object = results[i];
-                  query.destroy(object.id).then(res => {
-                      console.log(res)
-                  }).catch(err => {
-                      console.log(err)
-                  })
-              }
           },
           error: function (error) {
-              alert("查询失败:" + error.code + " " + error.message);
+              alert("无该条记录!");
           }
       });
+      for (var i = 0; i < results.length; i++) {
+          var object = results[i];
+          query.destroy(object.id).then(res => {
+              console.log(res)
+          }).catch(err => {
+              console.log(err)
+          })
+      }
     }
 
   // 提交评论
