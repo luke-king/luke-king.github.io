@@ -10,12 +10,12 @@ blog.addLoadEvent(function() {
   var templet = document.querySelector('.page-chat-list-templet')
 
   loadComment()
-  
+  /** 
   var com_time = "2019-08-16"
   var com_name = "beibei"
   var com_content = "123test"
   deleteComment()
-  
+  */
   // 加载留言
   function loadComment() {
     loadButton.innerText = '评论加载中...'
