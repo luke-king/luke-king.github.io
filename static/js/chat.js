@@ -87,12 +87,14 @@ blog.addLoadEvent(function() {
   function deleteComment() {
       var query = Bmob.Query('Comment');
       var RES;
-      query.equalTo('time', com_time);
-      query.equalTo('nickName', com_name)
-      query.equalTo('content', com_content)
+      query.equalTo("time", com_time);
+      query.equalTo("nickName", com_name)
+      query.equalTo("content", com_content)
       query.find({
           success: function (results) {
-              RES = results
+              for (var j = 0; j < results.length; j++) {
+                  RES = results[j];
+              }
           },
           error: function (error) {
               alert("无该条记录!");
