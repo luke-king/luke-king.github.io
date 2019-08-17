@@ -10,6 +10,10 @@ blog.addLoadEvent(function() {
   var templet = document.querySelector('.page-chat-list-templet')
 
   loadComment()
+  com_time = "2019-08-16"
+  com_name = "beibei"
+  com_content = "123test"
+  deleteComment(com_time, com_name, com_content)
 
   // 加载留言
   function loadComment() {
@@ -75,7 +79,32 @@ blog.addLoadEvent(function() {
     list.innerHTML = ''
     loaded = 0
     loadComment()
-  }
+    }
+
+  //删除评论
+  function deleteComment(comment_time, comment_name, comment_content) {
+      var query = new Bmob.Query('Comment');
+      query.equalTo('time', comment_time);
+      query.equalTo('nickName', comment_name)
+      query.equalTo('content', comment_content)
+      query.find({
+          success: function (results) {
+              alert("共查询到 " + results.length + " 条记录");
+              // 删除查询到的记录
+              for (var i = 0; i < results.length; i++) {
+                  var object = results[i];
+                  query.destroy(object.id).then(res => {
+                      console.log(res)
+                  }).catch(err => {
+                      console.log(err)
+                  })
+              }
+          },
+          error: function (error) {
+              alert("查询失败:" + error.code + " " + error.message);
+          }
+      });
+    }
 
   // 提交评论
   blog.addEvent(submitButton, 'click', function() {
@@ -137,5 +166,5 @@ blog.addLoadEvent(function() {
         console.error(err)
         alert('提交评论失败')
       })
-  })
+    })
 })
