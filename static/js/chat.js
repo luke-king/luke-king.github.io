@@ -10,9 +10,9 @@ blog.addLoadEvent(function() {
   var templet = document.querySelector('.page-chat-list-templet')
 
   loadComment()
-  com_time = "2019-08-16"
-  com_name = "beibei"
-  com_content = "123test"
+  var com_time = "2019-08-16"
+  var com_name = "beibei"
+  var com_content = "123test"
   deleteComment(com_time, com_name, com_content)
 
   // 加载留言
