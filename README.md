@@ -1,75 +1,16 @@
 # 介绍
 
-一款 jekyll 主题（[GitHub 地址](https://github.com/TMaize/tmaize-blog)），简洁纯净，未引入任何框架，秒开页面，支持自适应，支持全文检索
+本人SLAM小萌新一枚，想系统学习SLAM的基础和进阶以及各传感器数据采集标定等知识，特此搭了一个简易的静态博客用于记录自己的学习笔记和心得，欢迎交流和指出文章中的错误。本博客托管于Github Page, 用的Github的域名和解析，留言页面使用的是 Bmob 云的免费套餐，另外使用的腾讯的 MTA 分析工具统计访问量。
 
-下面有具体的样式截图，或者你可以到[TMaize Blog](http://blog.tmaize.net/)查看运行效果
+# 感兴趣方向
 
-# 注意
+* 视觉SLAM
+* 激光SLAM
+* 各种传感器的使用和融合标定
+* 深度学习在SLAM中的应用
 
-1. 如果使用自己的域名，`/CNAME`文件里的内容请换成你自己的域名，然后 CNAME 解析到`用户名.github.com`
+# 联系方式
 
-2. 如果使用 GitHub 的的域名，请删除`/CNAME`文件,然后把你的项目修改为`用户名.github.io`
+QQ：2991682569
 
-3. 修改`/pages/about.md`中关于我的内容
-
-4. 修改`/_data/links.json` 友情链接里的内容
-
-5. 适当修改`/_config.yml` 文件，具体作用请参考注释
-
-6. 清空`/_posts`目录下文件和`/post`目录下文件
-
-7. 网站的 logo 放在了`/static/img/`下
-
-8. 最后，如果你把项目 fork 过去了，想要删除我的提交记录可以先软重置到第一个提交，然后再提交一次，最后强制推送一次就行了
-
-## 插件配置
-
-这里是 customPlugins 节点下的一些配置说明
-
-- plugin-mta-stats
-
-  腾讯移动分析,[官网](https://mta.qq.com)，如果需要请申请自己的！！！sid，cid 在统计代码里找
-
-  不需要的话 use 请设置为 false
-
-- plugin-baidu-push
-
-  百度收录自动推送，不需要的话 use 请设置为 false
-
-- plugin-click-effect
-
-  页面点击，出现文字冒泡特效，不喜欢这个花里胡哨功能的 use 请设置为 false
-
-- plugin-mathjax
-
-  数学公式支持，比较影响加载速度，不需要的话 use 请设置为 false
-
-# 使用
-
-文章放在`/_posts`目录，命名为`yyyy-MM-dd-xxxx-xxxx.md`，内容格式如下
-
-```
----
-layout: mypost
-title: 标题
-categories: [分类1,分类2]
----
-
-文章内容，MD格式
-```
-
-文章资源放在`/posts`目录，如文章标题是`2019-05-01-theme-user.md`，则该篇文章的资源放在`/posts/2019/05/01`下,在文章使用时直接引用即可
-
-```
-![这是图片](xxx.png)
-
-[xxx.zip下载](xxx.zip)
-```
-
-# 移动端截图
-
-![mobile](static/readme/mobile.jpg)
-
-# PC 端截图
-
-![pc](static/readme/pc.jpg)
+Email：kkliu1996@shu.edu.cn
