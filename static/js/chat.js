@@ -13,7 +13,7 @@ blog.addLoadEvent(function() {
   var com_time = "2019-08-16"
   var com_name = "beibei"
   var com_content = "123test"
-  deleteComment(com_time, com_name, com_content)
+  deleteComment()
 
   // 加载留言
   function loadComment() {
@@ -82,22 +82,22 @@ blog.addLoadEvent(function() {
     }
 
   //删除评论
-  function deleteComment(comment_time, comment_name, comment_content) {
+  function deleteComment() {
       var query = new Bmob.Query('Comment');
-      query.equalTo('time', comment_time);
-      query.equalTo('nickName', comment_name)
-      query.equalTo('content', comment_content)
+      var RES;
+      query.equalTo('time', com_time);
+      query.equalTo('nickName', com_name)
+      query.equalTo('content', com_content)
       query.find({
           success: function (results) {
-              //alert("共查询到 " + results.length + " 条记录");
-              // 删除查询到的记录
+              RES = results
           },
           error: function (error) {
               alert("无该条记录!");
           }
       });
-      for (var i = 0; i < results.length; i++) {
-          var object = results[i];
+      for (var i = 0; i < RES.length; i++) {
+          var object = RES[i];
           query.destroy(object.id).then(res => {
               console.log(res)
           }).catch(err => {
