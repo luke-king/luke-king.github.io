@@ -82,7 +82,7 @@ blog.addLoadEvent(function() {
     loadComment()
     }
 
- 
+ /** 
   //删除评论
   function deleteComment() {
       var query = Bmob.Query('Comment');
@@ -109,7 +109,7 @@ blog.addLoadEvent(function() {
           })
       }
     }
-
+*/
 
 
   // 提交评论
