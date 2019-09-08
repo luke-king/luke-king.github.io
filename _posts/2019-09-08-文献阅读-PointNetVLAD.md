@@ -1,6 +1,6 @@
 ---
 layout: mypost
-titile: PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition
+title: PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition
 categories: [文献阅读，激光SLAM，深度学习]
 ---
 
