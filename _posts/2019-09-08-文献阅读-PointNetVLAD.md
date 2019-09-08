@@ -1,3 +1,11 @@
+---
+layout: mypost
+titile: PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition
+categories: [文献阅读，激光SLAM，深度学习]
+---
+
+
+
 ## PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition（CVPR2018）
 
 本文主要是使用纯激光的信息去做场景的检索，问题有别于回环检测但是方法的思想有相似之处可以借鉴，并且文章结合了pointnet。
