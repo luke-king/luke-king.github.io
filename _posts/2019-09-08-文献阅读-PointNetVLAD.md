@@ -313,7 +313,7 @@ $$
                   [-1, self.max_samples, self.cluster_size])
   ```
 
-  对得到的activation做softmax，即完成公式中$\frac{e^{w^T_kp'_i}+b_k}{\sum_{k'}e^{w^T_{k'}p'_i+b_{k'}}}$的操作。
+  对得到的activation做softmax，即完成公式中 $$\frac{e^{w^T_kp'_i}+b_k}{\sum_{k'}e^{w^T_{k'}p'_i+b_{k'}}}$$ 的操作。
 
   ```python
   a_sum = tf.reduce_sum(activation,-2,keep_dims=True)
@@ -337,7 +337,7 @@ $$
   vlad = tf.subtract(vlad,a)
   ```
 
-  接下来的操作有一点技巧性，作者并没有按照公式中的步骤来把$p'_i-c_k$再乘softmax result，而是把两者拆开分别求值，变成$\sum_{i=1}^n \frac{e^{w^T_kp'_i}+b_k}{\sum_{k'}e^{w^T_{k'}p'_i+b_{k'}}} p'_i$和$\sum_{i=1}^n \frac{e^{w^T_kp'_i}+b_k}{\sum_{k'}e^{w^T_{k'}p'_i+b_{k'}}} c_k$。
+  接下来的操作有一点技巧性，作者并没有按照公式中的步骤来把$$p'_i-c_k$$再乘softmax result，而是把两者拆开分别求值，变成 $$\sum_{i=1}^n \frac{e^{w^T_kp'_i}+b_k}{\sum_{k'}e^{w^T_{k'}p'_i+b_{k'}}} p'_i$$ 和 $$\sum_{i=1}^n \frac{e^{w^T_kp'_i}+b_k}{\sum_{k'}e^{w^T_{k'}p'_i+b_{k'}}} c_k$$ 。
 
   对于第二部分$c_k$，作者建立新的参数cluster_weights2去学习它，将a_sum和cluser_weights2相乘就表达出了第二部分的式子；对于第一部分，将activation的二三维(num_point、cluster_size)换位置，再乘以原始的input $p'$，最后位置换回来就实现了第一部分式子的操作。最终两者相减。
 
